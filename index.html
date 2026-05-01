@@ -119,6 +119,7 @@ body{font-family:var(--f-body);background:var(--bg);color:var(--fg);line-height:
 @media(max-width:768px){.tech-diagram{padding:32px 16px}}
 .tech-diagram__title{font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:32px;text-align:center}
 .tech-flow{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:nowrap;overflow-x:auto;padding:16px 0}
+@media(max-width:768px){.tech-flow{justify-content:flex-start}}
 .tech-step{display:flex;flex-direction:column;align-items:center;text-align:center;min-width:140px;position:relative}
 @media(min-width:769px){.tech-step{min-width:180px}}
 .tech-step__circle{width:80px;height:80px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;background:rgba(201,168,76,.05)}
@@ -535,11 +536,14 @@ footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;fo
 
   <div class="access-grid" id="accessGrid" style="align-items:center">
     <div id="accessInfo">
-      <div>
-        <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-d);margin-bottom:10px">Venue</div>
-        <div style="font-size:clamp(20px,2.5vw,28px);font-weight:600;margin-bottom:12px">ReLux</div>
-        <div style="font-size:clamp(14px,1.5vw,17px);color:var(--fg-m);line-height:2">〒352-0001<br>埼玉県新座市東北2丁目30-16<br>細田ビル 5F</div>
+      <div style="display:flex;align-items:center;gap:20px;margin-bottom:6px">
+        <img src="assets/relux_logo_white.png" alt="ReLux" style="width:72px;height:auto;opacity:.92;flex-shrink:0">
+        <div>
+          <div style="font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-d);margin-bottom:6px">Venue</div>
+          <div style="font-size:clamp(20px,2.5vw,28px);font-weight:600;line-height:1.2">ReLux</div>
+        </div>
       </div>
+      <div style="font-size:clamp(14px,1.5vw,17px);color:var(--fg-m);line-height:2">〒352-0001<br>埼玉県新座市東北2丁目30-16<br>細田ビル 5F</div>
     </div>
     <div>
       <div id="mapContainer" style="width:100%;aspect-ratio:4/3;border:1px solid var(--border);overflow:hidden;background:var(--bg-card)">
@@ -579,7 +583,6 @@ footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;fo
       <div style="font-size:14px;color:var(--fg-m)">Full Swing 公式プロモーション</div>
     </div>
   </div>
-  <p style="font-family:var(--f-mono);font-size:10px;color:var(--fg-d);margin-top:24px;letter-spacing:.05em">※ 動画は仮のプレースホルダーです。実際のURLに差し替えてください。</p>
 </section>
 
 <footer><p>© 2026 ReLux — Powered by Full Swing</p></footer>
