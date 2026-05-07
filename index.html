@@ -50,13 +50,15 @@ body{font-family:var(--f-body);background:var(--bg);color:var(--fg);line-height:
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:88px 24px 72px}
 @media(min-width:769px){.hero{padding:0 48px 0 96px}}
 .hero__bg{position:absolute;inset:0;z-index:0;overflow:hidden}
-.hero__bg picture,.hero__bg img{display:block;width:100%;height:100%}
-.hero__bg img{object-fit:cover;opacity:1;filter:brightness(1) contrast(1.02) saturate(1.08);will-change:transform;transform-origin:75% 70%}
+.hero__bg picture,.hero__bg img,.hero__bg video{display:block;width:100%;height:100%}
+.hero__bg img,.hero__bg video{object-fit:cover;opacity:1;filter:brightness(1) contrast(1.02) saturate(1.08);will-change:transform;transform-origin:75% 70%}
 @media(min-width:769px){
   .hero__bg img{width:140%;object-position:left center;animation:heroPan 28s ease-in-out infinite alternate;transform-origin:center}
+  .hero__bg video{object-position:center center}
 }
 @media(max-width:768px){
   .hero__bg img{object-position:center 60%;animation:heroZoom 36s ease-in-out infinite alternate}
+  .hero__bg video{object-position:center 60%}
 }
 @keyframes heroPan{
   0%{transform:translateX(0)}
@@ -271,10 +273,9 @@ footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;fo
 <!-- ══ 1: HERO ══ -->
 <section class="hero" id="hero" data-nav-label="Top">
   <div class="hero__bg">
-    <picture>
-      <source media="(max-width:768px)" srcset="assets/hero-relux03.png">
-      <img src="assets/hero-relux02.png" alt="" loading="eager">
-    </picture>
+    <video autoplay muted loop playsinline preload="auto" poster="assets/hero-relux02.png" aria-hidden="true">
+      <source src="assets/hero-movie.mp4" type="video/mp4">
+    </video>
     <div class="hero__bg-ov"></div>
   </div>
   <div class="hero__brand">
